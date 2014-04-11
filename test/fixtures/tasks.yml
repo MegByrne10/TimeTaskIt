@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task: MyString
+  time_goal: 1
+  completed: false
+  list_id: 
+
+two:
+  task: MyString
+  time_goal: 1
+  completed: false
+  list_id: 
