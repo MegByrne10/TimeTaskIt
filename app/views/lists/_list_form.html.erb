@@ -1,0 +1,7 @@
+<%= form_for @list, html: { class: 'form-inline'} do |f| %>
+  
+  <%= f.label :title, class: 'sr-only' %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.submit "Save", class: 'btn btn-success  btn-sm' %>
+<% end %>

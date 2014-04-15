@@ -1,6 +1,3 @@
-<%= form_for @list do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.submit "Save" %>
-<% end %>
+<div class="col-md-offset-1 breather">
+  <%= render partial: 'list_form' %>
+</div>

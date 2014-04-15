@@ -1,4 +1,22 @@
-<h1>To Do Lists</h1>
-<% @lists.each do |list| %>
-  <p><%= link_to list.title, list %></p>
-<% end %>
+<div class="row">
+  <div class="col-md-3 col-md-offset-1">
+    <h1>To Do Lists</h1>
+
+    <table class="#">
+      <tr>
+        <th>List</th>
+        <th></th>
+      </tr>
+      <% @lists.each do |list| %>
+        <tr>
+          <td><h5><%= link_to list.title, list %></h5></td>
+
+          <td><%= link_to "Edit", edit_list_path(list), class: 'btn btn-info btn-xs' %></td> 
+        </tr>
+      <% end %>
+    </table>
+    <%= link_to "New List", new_list_path, class: 'btn btn-primary' %>
+  </div>
+  <div class="col-md-8">
+  </div>
+</div>

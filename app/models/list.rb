@@ -3,4 +3,5 @@ class List < ActiveRecord::Base
   has_many :tasks, dependent: :destroy
 
   validates :title, length: { maximum: 20 }, presence: true
+  validates_presence_of :user
 end

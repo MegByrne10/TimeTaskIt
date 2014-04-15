@@ -1,6 +1,8 @@
 class ListsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @lists = List.all
+    @lists = List.where(user: current_user)
   end
 
   def show
@@ -13,6 +15,7 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
+    @list.user = current_user
 
     if @list.save
       flash[:notice] = "To Do List saved."
