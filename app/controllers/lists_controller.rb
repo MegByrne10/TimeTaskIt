@@ -19,7 +19,7 @@ class ListsController < ApplicationController
 
     if @list.save
       flash[:notice] = "To Do List saved."
-      redirect_to @list
+      redirect_to lists_path
     else
       flash[:error] = "There was an error saving your To Do List. Please try again."
       render :new
@@ -37,6 +37,18 @@ class ListsController < ApplicationController
       redirect_to @list
     else
       render 'edit'
+    end
+  end
+
+  def destroy
+    @list = List.find(params[:id])
+
+    if @list.destroy
+      flash[:notice] = "To Do List removed."
+      redirect_to lists_path
+    else
+      flash[:error] = "There was a problem removing your List.  Please try again."
+      render :show
     end
   end
 

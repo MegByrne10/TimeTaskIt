@@ -1,6 +1,6 @@
 body {
   margin-top: 1em;
-  background:url(ocean_background.png);
+  background:url(ocean_background.svg);
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: 5;
@@ -12,4 +12,21 @@ body {
 
 .breather {
   margin-top: 10px;
+}
+
+.jumbotron {
+  background: transparent;
+  text-align: center;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+a {
+  color: #333333;
+}
+
+td {
+  font-size: 18 px;
 }

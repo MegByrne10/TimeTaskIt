@@ -2,7 +2,7 @@
   <div class="col-md-3 col-md-offset-1">
     <h1>To Do Lists</h1>
 
-    <table class="#">
+    <table class="table table-hover">
       <tr>
         <th>List</th>
         <th></th>
@@ -10,8 +10,8 @@
       <% @lists.each do |list| %>
         <tr>
           <td><h5><%= link_to list.title, list %></h5></td>
-
-          <td><%= link_to "Edit", edit_list_path(list), class: 'btn btn-info btn-xs' %></td> 
+          <td><%= link_to "Edit", edit_list_path(list), class: 'btn btn-info btn-xs' %></td>
+          <td><%= link_to "Remove", @list, method: :delete, class: 'btn btn-danger btn-xs' %></td>
         </tr>
       <% end %>
     </table>
