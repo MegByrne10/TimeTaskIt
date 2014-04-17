@@ -8,42 +8,62 @@
 </head>
 <body>
   <div class= "container">
-    <ul class="nav nav-pills">
-      <li><%= link_to(image_tag("TimeTaskIt-logo.svg", :alt => "logo", :title => "Home"), "/") %></li>
-      <li>
-        <% if current_user %>
-          <%= link_to "To Do Lists", lists_path %>
-        <% end %>
-      </li>
-      <div class="pull-right">
-        <% if current_user %>
-          Hello, <%= link_to (current_user.name || current_user.email), edit_user_registration_path %>! <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-default' %>
-        <% else %>
-          <%= link_to "Sign In", new_user_session_path, class: 'btn btn-default' %> 
-          <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-default' %>
-        <% end %>
-      </div>  
-    </ul>
+    
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">
+            <%= link_to(image_tag("TimeTaskIt-logo.svg", :alt => "logo", :title => "Home"), "/") %>
+          </span>
+        </div>
+        <div class="collapse navbar-collapse breather" id="collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <% if current_user %>
+                <%= link_to "To Do Lists", lists_path %>
+              <% end %>
+            </li>
+          </ul>
+          <span class="navbar-right">
+            <% if current_user %>
+              <p class="navbar-text"> Hello, <span class="navbar-link"><%= link_to (current_user.name || current_user.email), edit_user_registration_path %></span>! </p><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-default navbar-btn' %>
+            <% else %>
+              <%= link_to "Sign In", new_user_session_path, class: 'btn btn-default navbar-btn' %> 
+              <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-default navbar-btn' %>
+            <% end %>
+          </span> 
+        </div>
+      </div>
+    </nav>
+    
+    <div>
+      <% if flash[:notice] %>
+          <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:notice] %>
+          </div>
+        <% elsif flash[:error] %>
+          <div class="alert alert-error alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:error] %>
+          </div>
+        <% elsif flash[:alert] %>
+          <div class="alert alert-info alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:alert] %>
+          </div>  
+        <% end %> 
 
-    <% if flash[:notice] %>
-        <div class="alert alert-success">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= flash[:notice] %>
-        </div>
-      <% elsif flash[:error] %>
-        <div class="alert alert-error">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= flash[:error] %>
-        </div>
-      <% elsif flash[:alert] %>
-        <div class="alert alert-error">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <%= flash[:alert] %>
-        </div>  
-      <% end %> 
-    <div class="main-content">
       <%= yield %>
+
     </div>
-  </div>
+  </div> 
 </body>
+<footer class="navbar navbar-fixed-bottom hidden-xs"></footer>
 </html>
