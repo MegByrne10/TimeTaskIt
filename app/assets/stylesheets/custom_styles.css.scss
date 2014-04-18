@@ -32,9 +32,12 @@ nav .container {
   margin-bottom: 10px;
 }
 
-td .centered {
-  margin-left: auto;
-  margin-right: auto;
+.breather-xl {
+  margin-top: 3em;
+}
+
+.breather-side {
+  margin-right: 1em;
 }
 
 .centered-text {
@@ -45,9 +48,21 @@ td .centered {
   font-size: 1.25em;
 }
 
+.white-text {
+  color: white;
+}
+
 .jumbotron {
   background: transparent;
   text-align: center;
+}
+
+.sign-up-band {
+  width: 100%;
+  height: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #333333;
 }
 
 a, a:hover, a:focus {

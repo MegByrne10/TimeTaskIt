@@ -22,7 +22,7 @@ class TasksController < ApplicationController
 
     if @task.destroy
       flash[:notice] = "Task Completed!"
-      redirect_to lists_path(@list)
+      redirect_to list_path(@list)
     else
       flash[:error] = "There was a problem removing your Task.  Please try again."
     end

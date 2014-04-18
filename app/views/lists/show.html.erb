@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <div class="col-md-8">
-    <%= render partial: 'tasks/task', collection: @tasks %>
+  <div class="col-md-8 breather-xl">
+    <%= render partial: 'tasks/task', locals: { list: @list } %>
   </div>
 </div>

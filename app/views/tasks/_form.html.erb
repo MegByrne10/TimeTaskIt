@@ -1,11 +1,11 @@
 <%= form_for [ list, task], html: { role: "form" } do |f| %>
   <div class="form-group">
-    <%= f.label :description %>
+    <%= f.label :description, "Task Description" %>
     <%= f.text_area :description, rows: 3, class: 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :time_goal %></br>
-    <%= f.date_select :time_goal, class: 'form-control' %>
+    <%= f.label :time_goal, "Date to Complete by" %></br>
+    <%= f.date_select :time_goal, class: 'form-control', :order => [:month, :day, :year] %>
   </div>
 
   <div class="form-group">
