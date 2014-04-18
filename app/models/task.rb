@@ -1,4 +1,5 @@
 class Task < ActiveRecord::Base
+  belongs_to :user
   belongs_to :list
   has_many :sub_tasks, dependent: :destroy
   

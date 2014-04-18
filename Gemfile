@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 gem 'devise'
 
 gem 'bootstrap-sass', '~> 3.1.1'
+
+#gem 'bootstrap-datepicker-rails'

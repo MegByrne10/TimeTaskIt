@@ -6,9 +6,14 @@ body {
   background-size: cover;
   z-index: 5;
 }
+
 nav .container {
   padding-right: 5em;
   padding-left: 5em;
+}
+
+.main-container {
+  padding-bottom: 150px;
 }
 
 .navbar-default {
@@ -20,6 +25,24 @@ nav .container {
 
 .breather {
   margin-top: 10px;
+}
+
+.breather-lg {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+td .centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.list-text {
+  font-size: 1.25em;
 }
 
 .jumbotron {
