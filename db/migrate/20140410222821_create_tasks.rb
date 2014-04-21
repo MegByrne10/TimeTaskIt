@@ -2,7 +2,7 @@ class CreateTasks < ActiveRecord::Migration
   def change
     create_table :tasks do |t|
       t.string :description
-      t.integer :time_goal
+      t.datetime :time_goal
       t.boolean :completed, default: false 
       t.references :list, index: true
 
