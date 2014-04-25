@@ -2,7 +2,7 @@
 body {
   padding-top: 70px;
   margin-top: 1em;
-  background: asset-url("ocean_background.svg", image) no-repeat 0 0 fixed;
+  background: asset-url("ocean_background.png", image) no-repeat 0 0 fixed;
   background-size: cover;
   z-index: 5;
 }
@@ -20,7 +20,7 @@ nav .container {
   height: 75px;
   background-color:transparent;
   border: none;
-  background: asset-url("wave-navbar.svg", image) repeat-x 0 0;
+  background: asset-url("wave-navbar.png", image) repeat-x 0 0;
 }
 
 .breather {
