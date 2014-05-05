@@ -73,6 +73,24 @@ a {
   color: #333333;
 }
 
+.center {
+
+  margin: auto;
+}
+
+.background-box {
+  margin:3em 40px;
+  background-color:#ffffff;
+  border:2px solid black;
+  border-radius: 10px;
+  opacity:0.6;
+  filter:alpha(opacity=60);
+}
+
+.inside-background-box {
+  padding: 1em 2em;
+}
+
 footer {
   postion: absolute;
   bottom: 0px;

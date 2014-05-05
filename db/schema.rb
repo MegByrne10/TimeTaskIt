@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418152444) do
+ActiveRecord::Schema.define(version: 20140505203726) do
 
   create_table "lists", force: true do |t|
     t.string   "title"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140418152444) do
 
   create_table "tasks", force: true do |t|
     t.string   "description"
-    t.datetime "time_goal"
+    t.date     "time_goal"
     t.boolean  "completed",   default: false
     t.integer  "list_id"
     t.datetime "created_at"

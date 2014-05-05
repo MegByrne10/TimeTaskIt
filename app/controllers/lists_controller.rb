@@ -3,6 +3,7 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.where(user: current_user)
+    @tasks = Task.all.almost_due 
   end
 
   def show
