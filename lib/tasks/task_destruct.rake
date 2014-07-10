@@ -1,4 +1,5 @@
 task task_delete: :environment do
-  Task.where("time_goal <= ?", Time.now).destroy_all
-  puts "Tasks Culled"
-end
+  Task.where("time_goal <= ?", Time.now).each do |task|
+    task.destroy
+  end
+end 
